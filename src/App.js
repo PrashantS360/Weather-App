@@ -10,7 +10,8 @@ import { SiWindicss } from 'react-icons/si'
 
 
 function App() {
-  const API_KEY = process.env.REACT_APP_API_KEY;
+  // const API_KEY = process.env.REACT_APP_API_KEY;
+  const API_KEY = "629fa4d664b2b4cf442f1a359f128527";
   
   const getCurrentDay = () => {
     var weekday = new Array(7);
