@@ -13,7 +13,7 @@ const Weather = ({ getCurrentDay, getCurrentTime, weather, sunrise, sunset }) =>
 
     return (
         <div>
-            <div className="flex justify-between flex-col md:flex-row space-y-5 datebg px-5 py-4 space-x-2 h-[27vh]">
+            <div className="flex justify-between flex-col md:flex-row space-y-5 datebg px-5 py-4 space-x-2 h-[28.5vh]">
                 <div className="date text-white text-2xl"> {getCurrentDay()} <br /> {getCurrentTime(now)}</div>
 
             </div>

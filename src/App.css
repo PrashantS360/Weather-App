@@ -9,6 +9,10 @@
   background-position: center;
 }
 
+.Apptitle{
+  font-family: 'Baloo 2';
+}
+
 *{
   /* font-family: 'Macondo', cursive; */
   font-family: monospace;
@@ -24,5 +28,6 @@
   font-size: 1.3rem;
   right: 0;
   margin: 12px;
+  margin-top: 20px;
   border-radius: 4px;
 }

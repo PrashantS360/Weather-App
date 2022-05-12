@@ -8,9 +8,7 @@ import Weather from './components/Weather';
 import Navbar from './components/Navbar';
 
 function App() {
-  // const API_KEY = process.env.REACT_APP_API_KEY;
-
-  const API_KEY = "629fa4d664b2b4cf442f1a359f128527";
+  const API_KEY = process.env.REACT_APP_API_KEY;
 
   const getCurrentDay = () => {
     var weekday = new Array(7);
@@ -149,7 +147,7 @@ function App() {
     <>
       <Navbar onChange={onChange} getData={getData} location={location}/>
       <div className="flex flex-col lg:flex-row ">
-        <div className=" lg:w-1/3 border-4 border-gray-700 ">
+        <div className=" lg:w-1/3 h- border-gray-700 min-h-[90vh] ">
           <ToastContainer />
           <Weather weather={weather} getCurrentDay={getCurrentDay} getCurrentTime={getCurrentTime} onChange={onChange} sunrise={sunrise} sunset={sunset} location={location} />
         </div>

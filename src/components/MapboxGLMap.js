@@ -14,10 +14,9 @@ const MapboxGLMap = ({ lon, lat }) => {
 
     // console.log(lon,lat);
     useEffect(() => {
-        // mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_KEY;
         // eslint-disable-next-line import/no-webpack-loader-syntax
         mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
-        mapboxgl.accessToken = "pk.eyJ1IjoiYnJpYW5iYW5jcm9mdCIsImEiOiJsVGVnMXFzIn0.7ldhVh3Ppsgv4lCYs65UdA";
+        mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_KEY;
         const initializeMap = ({ setMap, mapContainer }) => {
             const map = new mapboxgl.Map({
                 container: mapContainer.current,
@@ -37,7 +36,7 @@ const MapboxGLMap = ({ lon, lat }) => {
 
     return <>
         <div className="">
-            <div className="sidebar relative lg:absolute">
+            <div className="sidebar relative lg:absolute mt-11">
                 Longitude: {lon} | Latitude: {lat}
             </div>
             <div ref={el => (mapContainer.current = el)} style={styles} />
