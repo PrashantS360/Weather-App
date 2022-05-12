@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import mapboxgl from "mapbox-gl";
+import ReactMapGL from "react-map-gl";
+import mapboxgl from "mapbox-gl"; // This is a dependency of react-map-gl even if you didn't explicitly install it
 import "mapbox-gl/dist/mapbox-gl.css";
 
 
@@ -14,6 +15,8 @@ const MapboxGLMap = ({ lon, lat }) => {
     // console.log(lon,lat);
     useEffect(() => {
         // mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_KEY;
+        // eslint-disable-next-line import/no-webpack-loader-syntax
+        mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
         mapboxgl.accessToken = "pk.eyJ1IjoiYnJpYW5iYW5jcm9mdCIsImEiOiJsVGVnMXFzIn0.7ldhVh3Ppsgv4lCYs65UdA";
         const initializeMap = ({ setMap, mapContainer }) => {
             const map = new mapboxgl.Map({
@@ -22,7 +25,7 @@ const MapboxGLMap = ({ lon, lat }) => {
                 center: [lon, lat],
                 zoom: 11
             });
-            if (map) {
+            if (map && ReactMapGL) {
                 console.log("ALL OK!");
             }
         };
