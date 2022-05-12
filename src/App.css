@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Imperial+Script&family=Island+Moments&family=Macondo&family=Moon+Dance&family=Oooh+Baby&family=Vujahday+Script&display=swap');
 
-.App{
+.datebg{
   /* background-image: url('https://media-exp1.licdn.com/dms/image/C4D1BAQFVhpNDW2MoTw/company-background_10000/0/1568658087480?e=2147483647&v=beta&t=tfkl7DDy_yWBAp5uvpcTiRe9YU3NHtFQF8fAgZ3LRM4'); */
   /* background-image: url('https://i.imgur.com/14KQrxy.gif') ; */
   background-image: url('https://c.tenor.com/d4RQAzEG1LgAAAAC/tornado.gif') ;
@@ -10,5 +10,19 @@
 }
 
 *{
-  font-family: 'Macondo', cursive;
+  /* font-family: 'Macondo', cursive; */
+  font-family: monospace;
+}
+
+.sidebar {
+  background-color: rgba(35, 55, 75, 0.9);
+  color: #fff;
+  padding: 6px 12px;
+  font-family: monospace;
+  z-index: 1;
+  bottom: 2vh;
+  font-size: 1.3rem;
+  right: 0;
+  margin: 12px;
+  border-radius: 4px;
 }
